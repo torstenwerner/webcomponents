@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>custom element</title>
+</head>
+
+<body>
+    <custom-sample id="container">
+        <p id="hello">Hello World!</p>
+    </custom-sample>
+
+    <custom-sample id="target">
+        <p id="helloTarget">Hello Target!</p>
+    </custom-sample>
+
+    <template id="sample-template">
+        <slot></slot>
+        <p id="hello">Goodbye!</p>
+
+        <style>
+            #hello {
+                    color: darkred;
+                    background-color: azure;
+                }
+            </style>
+    </template>
+
+    <style>
+        body {
+                font-size: 300%;
+            }
+    
+            #hello {
+                color: white;
+                background-color: darkblue;
+            }
+        </style>
+
+    <script type="module" src="custom.js"></script>
+</body>
+
+</html>
