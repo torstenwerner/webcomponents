@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>custom element</title>
+    <title>lithtml element</title>
 </head>
 
 <body>
@@ -16,18 +16,6 @@
     <custom-sample id="target" message="Bye bye!">
         <p id="helloTarget">Hello Target!</p>
     </custom-sample>
-
-    <template id="sample-template">
-        <slot></slot>
-        <p id="hello">Goodbye!</p>
-
-        <style>
-            #hello {
-                    color: darkred;
-                    background-color: azure;
-                }
-            </style>
-    </template>
 
     <style>
         body {
@@ -40,7 +28,7 @@
             }
         </style>
 
-    <script type="module" src="custom.js"></script>
+    <script type="module" src="lithtml.js"></script>
 </body>
 
 </html>

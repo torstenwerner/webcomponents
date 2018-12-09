@@ -1,18 +1,26 @@
 class CustomSample extends HTMLElement {
     constructor() {
         super();
+
         const template = document.querySelector('#sample-template');
         const clone = template.content.cloneNode(true);
         this.attachShadow({ mode: 'open' }).appendChild(clone);
-        this._greeting = this.shadowRoot.querySelector('#hello');
+
+        this._message = this.shadowRoot.querySelector('#hello');
     }
 
-    get greeting() {
-        return this._greeting.innerText;
+    connectedCallback() {
+        if (this.hasAttribute('message')) {
+            this.message = this.getAttribute('message');
+        }
     }
 
-    set greeting(value) {
-        this._greeting.innerText = value;
+    get message() {
+        return this._message.innerText;
+    }
+
+    set message(value) {
+        this._message.innerText = value;
     }
 }
 
